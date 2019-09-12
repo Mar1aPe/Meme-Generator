@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+header {
+  display: flex;
+  width: 100%;
+  background-image: linear-gradient(to right, red, yellow);
+  margin-bottom: 30px;
+
+
+}
+
+header p {
+  font-size: 50px;
+  text-align: center;
+
+  margin: 50px 100px;
+}

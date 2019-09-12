@@ -1,9 +1,19 @@
 import React from 'react';
+import { Animated } from 'react-animated-css';
+
+
+
 const Header = () => {
     return (
+
+
         <header>
-            <img src="https://static.thenounproject.com/png/105263-200.png" alt="derpina" />
-            <p>Meme Generator</p>
+            <Animated animationIn="rollIn" >
+                <img src="https://static.thenounproject.com/png/105263-200.png" alt="derpina" />
+            </Animated>
+            <Animated animationIn="rubberBand" animationInDuration={2000} className='infinite'>
+                <p>Meme Generator</p>
+            </Animated>
         </header>
     );
 }
