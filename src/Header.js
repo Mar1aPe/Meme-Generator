@@ -11,7 +11,7 @@ const Header = () => {
             <Animated animationIn="rollIn" >
                 <img src="https://static.thenounproject.com/png/105263-200.png" alt="derpina" />
             </Animated>
-            <Animated animationIn="rubberBand" animationInDuration={2000} className='infinite'>
+            <Animated animationIn="rubberBand" animationInDuration={2000} >
                 <p>Meme Generator</p>
             </Animated>
         </header>

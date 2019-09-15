@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+
 class MemeGenerator extends Component {
     state = {
         topText: '',
@@ -33,6 +34,15 @@ class MemeGenerator extends Component {
         this.setState({ randomImg: randomMemeImg });
     }
 
+    downloadMeme = (e) => {
+        e.preventDefault()
+        // const myMeme = document.getElementByClassName('.meme');
+        // const blob = new Blob([myMeme], { type: Image });
+        // saveAs(blob, 'meme.jpg');
+
+
+    }
+
     render() {
         return (
             <div>
@@ -43,10 +53,11 @@ class MemeGenerator extends Component {
 
                     <button onClick={this.handleGenerator}>Generate</button>
                 </form>
-                <div className='meme'><img src={this.state.randomImg} alt='' /></div>
-                <h2 className='topText'>{this.state.topText}</h2>
-                <h2 className='bottomText'>{this.state.bottomText}</h2>
-
+                <div className='meme' download='generatedMeme'><img src={this.state.randomImg} alt='' />
+                    <h2 className='topText'>{this.state.topText}</h2>
+                    <h2 className='bottomText'>{this.state.bottomText}</h2>
+                </div>
+                <button className='download' onClick={this.downloadMeme}>Download meme</button>
 
             </div>
         );

@@ -5,6 +5,10 @@
 
 }
 
+body {
+  background-color: rgb(16, 57, 73);
+}
+
 header {
   display: flex;
   width: 100%;
@@ -19,4 +23,61 @@ header p {
   text-align: center;
 
   margin: 50px 100px;
+}
+
+form {
+  display: flex;
+
+  justify-content: space-around;
+  padding: 50px;
+}
+
+input,
+button {
+  height: 40px;
+  flex-grow: 1;
+  margin-left: 20px;
+  flex-wrap: wrap;
+
+
+}
+
+.meme {
+
+  position: relative;
+  text-align: center;
+  width: 350px;
+  height: 350px;
+  margin: auto;
+}
+
+.meme img {
+  width: 350px;
+  height: 350px;
+
+
+
+}
+
+.topText {
+  position: absolute;
+  top: 8px;
+  word-wrap: wrap;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 8px white;
+
+
+}
+
+.bottomText {
+  position: absolute;
+  bottom: 8px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 8px white;
 }
