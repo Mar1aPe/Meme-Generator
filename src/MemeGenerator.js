@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
+import domtoimage from 'dom-to-image';
+import { saveAs } from 'file-saver';
+
 
 
 class MemeGenerator extends Component {
     state = {
         topText: '',
         bottomText: '',
-        randomImg: 'https://i.imgflip.com/2/3a30wc.jpg',
+        randomImg: 'https://imgflip.com/s/meme/Futurama-Fry.jpg',
         allMemeImgs: []
     }
 
@@ -32,32 +35,40 @@ class MemeGenerator extends Component {
         const randomNumber = Math.floor(Math.random() * this.state.allMemeImgs.length)
         const randomMemeImg = this.state.allMemeImgs[randomNumber].url
         this.setState({ randomImg: randomMemeImg });
+
+
     }
 
     downloadMeme = (e) => {
-        e.preventDefault()
-        // const myMeme = document.getElementByClassName('.meme');
-        // const blob = new Blob([myMeme], { type: Image });
-        // saveAs(blob, 'meme.jpg');
+        e.preventDefault();
+        domtoimage.toBlob(document.getElementById("meme"))
+            .then(function (blob) {
+                saveAs(blob, 'myImage.png');
+            });
+
 
 
     }
 
     render() {
         return (
-            <div>
+            <div className='main'>
                 <form className="meme-form">
                     <input name='topText' type="text" placeholder='Top Text' value={this.state.topText} onChange={this.handleChange} />
 
                     <input name='bottomText' type="text" placeholder='Bottom Text' value={this.state.bottomText} onChange={this.handleChange} />
 
-                    <button onClick={this.handleGenerator}>Generate</button>
+                    <button onClick={this.handleGenerator}>Get Image</button>
+
                 </form>
-                <div className='meme' download='generatedMeme'><img src={this.state.randomImg} alt='' />
+
+                <div className='meme' id='meme' ><img src={this.state.randomImg} alt='' />
                     <h2 className='topText'>{this.state.topText}</h2>
                     <h2 className='bottomText'>{this.state.bottomText}</h2>
+
                 </div>
-                <button className='download' onClick={this.downloadMeme}>Download meme</button>
+
+                <button className='downloadBtn' onClick={this.downloadMeme}>Download meme</button>
 
             </div>
         );

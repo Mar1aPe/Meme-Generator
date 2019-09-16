@@ -25,18 +25,19 @@ header p {
   margin: 50px 100px;
 }
 
+
 form {
   display: flex;
-
   justify-content: space-around;
   padding: 50px;
 }
 
 input,
 button {
+  display: inline-block;
   height: 40px;
   flex-grow: 1;
-  margin-left: 20px;
+  margin-right: 20px;
   flex-wrap: wrap;
 
 
@@ -46,28 +47,30 @@ button {
 
   position: relative;
   text-align: center;
-  width: 350px;
+
+  width: 400px;
   height: 350px;
-  margin: auto;
+
+  word-break: break-all;
+  background-color: black;
 }
 
 .meme img {
-  width: 350px;
+  width: 400px;
   height: 350px;
-
-
 
 }
 
 .topText {
   position: absolute;
   top: 8px;
+
   word-wrap: wrap;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 30px;
   text-align: center;
   text-transform: uppercase;
-  text-shadow: 2px 2px 8px white;
+  text-shadow: 4px 4px 8px white;
 
 
 }
@@ -75,9 +78,15 @@ button {
 .bottomText {
   position: absolute;
   bottom: 8px;
+
   text-align: center;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 30px;
   text-transform: uppercase;
-  text-shadow: 2px 2px 8px white;
+  text-shadow: 4px 4px 8px white;
+}
+
+.downloadBtn {
+  margin: 25px;
+  background-color: #4CAF50;
 }
