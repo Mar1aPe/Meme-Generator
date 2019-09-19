@@ -25,6 +25,18 @@ header p {
   margin: 50px 100px;
 }
 
+@media only screen and (max-width: 600px) {
+  header p {
+    font-size: 25px;
+    margin: 50px 30px;
+  }
+
+  header img {
+    width: 100px;
+    height: 100px;
+  }
+}
+
 
 form {
   display: flex;
@@ -39,7 +51,21 @@ button {
   flex-grow: 1;
   margin-right: 20px;
   flex-wrap: wrap;
+}
 
+@media only screen and (max-width: 600px) {
+  form {
+    display: inline-block;
+    padding: 35px;
+  }
+
+  input,
+  button {
+
+    width: 200px;
+    margin: 10px;
+
+  }
 
 }
 
@@ -47,13 +73,12 @@ button {
 
   position: relative;
   text-align: center;
-
   width: 400px;
   height: 350px;
-
   word-break: break-all;
-  background-color: black;
+
 }
+
 
 .meme img {
   width: 400px;
@@ -61,29 +86,48 @@ button {
 
 }
 
+@media only screen and (max-width: 600px) {
+
+  .meme {
+    width: 250px;
+    height: 200px;
+  }
+
+  .meme img {
+    width: 250px;
+    height: 200px;
+
+  }
+}
+
 .topText {
   position: absolute;
   top: 8px;
-
   word-wrap: wrap;
   font-weight: bold;
   font-size: 30px;
   text-align: center;
   text-transform: uppercase;
   text-shadow: 4px 4px 8px white;
-
-
 }
 
 .bottomText {
+
   position: absolute;
   bottom: 8px;
-
   text-align: center;
   font-weight: bold;
   font-size: 30px;
   text-transform: uppercase;
   text-shadow: 4px 4px 8px white;
+}
+
+@media only screen and (max-width: 600px) {
+
+  .topText,
+  .bottomText {
+    font-size: 18px;
+  }
 }
 
 .downloadBtn {
