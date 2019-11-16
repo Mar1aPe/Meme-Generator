@@ -1,3 +1,14 @@
+# Meme generator
+
+Website live preview on [this GitHub Page](https://mar1ape.github.io/Meme-Generator/)
+
+![Page preview](./src/images/memegeneimg.JPG)
+
+
+# React.js was used to build this meme generator by following tutorial and was personalized by me by adding download meme button.
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
